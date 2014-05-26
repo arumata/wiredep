@@ -85,8 +85,8 @@ var fileTypesDefault = {
   yaml: {
     block: /(([ \t]*)#\s*bower:*(\S*))(\n|\r|.)*?(#\s*endbower)/gi,
     detect: {
-      js: /-\s(.+)/gi,
-      css: /-\s(.+)/gi
+      js: /-\s(.+js)\s*$/gi,
+      css: /-\s(.+css)\s*$/gi
     },
     replace: {
       js: '- {{filePath}}',
